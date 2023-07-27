@@ -6,7 +6,7 @@ const app = express();
 
 // CONNECTION
 mongoose
-  .connect(process.env.DATABASEURL, {
+  .connect("mongodb://localhost:27017/logitutedandlatitude", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -28,5 +28,5 @@ const port = process.env.PORT || 8000;
 
 // SERVER STARTING
 app.listen(process.env.PORT,()=>{
-    console.log(`http://localhost:${process.env.PORT}`)
+    console.log(`http://localhost:${8000}`)
 })
